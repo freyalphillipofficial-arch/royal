@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal - Where Prestige Meets Connection</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:#090909;
+border-bottom:1px solid #d4af37;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#d4af37;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(to right,#000,#111);
+}
+
+.hero h1{
+font-size:60px;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+opacity:.9;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.container{
+width:90%;
+margin:auto;
+padding:40px 0;
+}
+
+.grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:25px;
+}
+
+.card{
+background:#0f0f0f;
+padding:25px;
+border-radius:15px;
+border:1px solid #222;
+}
+
+.card h2{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+textarea{
+width:100%;
+height:120px;
+background:#161616;
+border:none;
+color:white;
+padding:15px;
+border-radius:10px;
+}
+
+.post-actions{
+margin-top:15px;
+display:flex;
+gap:10px;
+}
+
+button{
+padding:12px 20px;
+background:#d4af37;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.community-box{
+padding:15px;
+background:#141414;
+border-radius:10px;
+margin-top:15px;
+}
+
+.community-box h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.feed-post{
+padding:20px;
+background:#141414;
+margin-top:15px;
+border-radius:10px;
+}
+
+.feed-post h4{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+margin-top:50px;
+border-top:1px solid #222;
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">ROYAL</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Friends</a>
+<a href="#">Communities</a>
+<a href="#">Gallery</a>
+<a href="#">Blog</a>
+<a href="#">Messages</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Royal</h1>
+
+<p>
+A luxury social network where successful people connect,
+share ideas, build communities and inspire the world.
+</p>
+
+<a href="#" class="btn">Join Royal</a>
+
+</section>
+
+<div class="container">
+
+<div class="grid">
+
+<div>
+
+<div class="card">
+
+<h2>Talk To The World</h2>
+
+<textarea placeholder="What's on your mind today?"></textarea>
+
+<div class="post-actions">
+
+<button>📷 Upload Photo</button>
+<button>🎥 Upload Video</button>
+<button>Publish</button>
+
+</div>
+
+</div>
+
+<div class="card" style="margin-top:25px;">
+
+<h2>Trending Posts</h2>
+
+<div class="feed-post">
+
+<h4>Luxury Lifestyle</h4>
+
+<p>
+Success isn't just about money.
+It's about freedom, impact and legacy.
+</p>
+
+</div>
+
+<div class="feed-post">
+
+<h4>Business Network</h4>
+
+<p>
+Connect with entrepreneurs and investors around the world.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="card">
+
+<h2>Friends Achievements</h2>
+
+<p>🏆 Michael completed his MBA</p>
+<br>
+<p>🎉 Sarah launched her company</p>
+<br>
+<p>⭐ David reached 10,000 followers</p>
+
+</div>
+
+<div class="card" style="margin-top:25px;">
+
+<h2>Communities</h2>
+
+<div class="community-box">
+
+<h3>Create Community</h3>
+
+<p>
+Gather your friends, family, relatives or business partners
+to discuss important matters privately.
+</p>
+
+<br>
+
+<button>Create Community</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+© 2026 Royal — Where Prestige Meets Connection
+</p>
+
+</footer>
+
+</body>
+</html>
