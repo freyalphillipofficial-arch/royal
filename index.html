@@ -1,306 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Royal - Where Prestige Meets Connection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL — Where Prestige Meets Connection</title>
+    <style>
+        :root {
+            --pure-black: #030303;
+            --luxury-black: #0b0b0b;
+            --card-black: #121212;
+            --gold-primary: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.15);
+            --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+            --text-main: #f5f5f5;
+            --text-muted: #8a8a8a;
+            --border-color: #222222;
+        }
 
-<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
+        body {
+            background-color: var(--pure-black);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% -20%, #1a1508 0%, transparent 60%);
+        }
 
-body{
-background:#050505;
-color:white;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 6%;
+            background: rgba(11, 11, 11, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--gold-primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 50px;
-background:#090909;
-border-bottom:1px solid #d4af37;
-position:sticky;
-top:0;
-}
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#d4af37;
-}
+        nav {
+            display: flex;
+            gap: 30px;
+        }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-transition:.3s;
-}
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
 
-nav a:hover{
-color:#d4af37;
-}
+        nav a:hover, nav a.active {
+            color: var(--gold-primary);
+        }
 
-.hero{
-text-align:center;
-padding:80px 20px;
-background:linear-gradient(to right,#000,#111);
-}
+        .wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 4%;
+        }
 
-.hero h1{
-font-size:60px;
-color:#d4af37;
-margin-bottom:20px;
-}
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 35px;
+        }
 
-.hero p{
-font-size:18px;
-max-width:700px;
-margin:auto;
-opacity:.9;
-}
+        .card {
+            background: var(--card-black);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:15px 35px;
-background:#d4af37;
-color:black;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-}
+        .card-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+            border-left: 3px solid var(--gold-primary);
+            padding-left: 12px;
+        }
 
-.container{
-width:90%;
-margin:auto;
-padding:40px 0;
-}
+        .publisher textarea {
+            width: 100%;
+            height: 110px;
+            background: #181818;
+            border: 1px solid #252525;
+            border-radius: 12px;
+            color: var(--text-main);
+            padding: 15px;
+            font-size: 15px;
+            resize: none;
+            outline: none;
+        }
 
-.grid{
-display:grid;
-grid-template-columns:2fr 1fr;
-gap:25px;
-}
+        .action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
 
-.card{
-background:#0f0f0f;
-padding:25px;
-border-radius:15px;
-border:1px solid #222;
-}
+        .upload-options {
+            display: flex;
+            gap: 15px;
+        }
 
-.card h2{
-color:#d4af37;
-margin-bottom:15px;
-}
+        .upload-btn {
+            background: #161616;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
 
-textarea{
-width:100%;
-height:120px;
-background:#161616;
-border:none;
-color:white;
-padding:15px;
-border-radius:10px;
-}
+        .submit-btn {
+            background: var(--gold-gradient);
+            color: var(--pure-black);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+        }
 
-.post-actions{
-margin-top:15px;
-display:flex;
-gap:10px;
-}
+        .feed-item {
+            border-bottom: 1px solid #1a1a1a;
+            padding: 25px 0;
+        }
 
-button{
-padding:12px 20px;
-background:#d4af37;
-border:none;
-border-radius:8px;
-cursor:pointer;
-font-weight:bold;
-}
+        .feed-meta {
+            font-size: 12px;
+            color: var(--gold-primary);
+            margin-bottom: 8px;
+        }
 
-.community-box{
-padding:15px;
-background:#141414;
-border-radius:10px;
-margin-top:15px;
-}
-
-.community-box h3{
-color:#d4af37;
-margin-bottom:10px;
-}
-
-.feed-post{
-padding:20px;
-background:#141414;
-margin-top:15px;
-border-radius:10px;
-}
-
-.feed-post h4{
-color:#d4af37;
-margin-bottom:10px;
-}
-
-footer{
-text-align:center;
-padding:40px;
-margin-top:50px;
-border-top:1px solid #222;
-}
-
-@media(max-width:900px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-}
-
-</style>
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            margin-top: 100px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
+    <header>
+        <div class="logo">ROYAL</div>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/friends">Friends</a>
+        </nav>
+    </header>
 
-<div class="logo">ROYAL</div>
+    <div class="wrapper">
+        <div class="grid-container">
+            
+            <main>
+                <div class="card publisher">
+                    <div class="card-title">Talk to the World</div>
+                    <textarea id="postInput" placeholder="Share your insights, visions, or investments..."></textarea>
+                    <div class="action-bar">
+                        <div class="upload-options">
+                            <button class="upload-btn" onclick="alert('Media upload pipeline active.')">📷 Photo</button>
+                            <button class="upload-btn" onclick="alert('Media upload pipeline active.')">🎥 Video</button>
+                        </div>
+                        <button class="submit-btn" onclick="submitPost()">Publish</button>
+                    </div>
+                </div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Friends</a>
-<a href="#">Communities</a>
-<a href="#">Gallery</a>
-<a href="#">Blog</a>
-<a href="#">Messages</a>
-</nav>
+                <div class="card">
+                    <div class="card-title">Prestige Feed</div>
+                    <div id="feedStream"></div>
+                </div>
+            </main>
 
-</header>
+            <aside>
+                <div class="card">
+                    <div class="card-title">Circle Achievements</div>
+                    <p>🏆 Michael Collins completed executive MBA milestone.</p>
+                </div>
+            </aside>
 
-<section class="hero">
+        </div>
+    </div>
 
-<h1>Royal</h1>
+    <footer>© 2026 ROYAL</footer>
 
-<p>
-A luxury social network where successful people connect,
-share ideas, build communities and inspire the world.
-</p>
+    <script>
+        // Fetch posts from backend when page loads
+        async function loadFeed() {
+            const response = await fetch('/api/posts');
+            const posts = await response.json();
+            const stream = document.getElementById('feedStream');
+            stream.innerHTML = '';
+            
+            posts.forEach(post => {
+                stream.innerHTML += `
+                    <div class="feed-item">
+                        <div class="feed-meta">${post.meta}</div>
+                        <p>${post.text}</p>
+                    </div>
+                `;
+            });
+        }
 
-<a href="#" class="btn">Join Royal</a>
+        // Send new post data to backend
+        async function submitPost() {
+            const input = document.getElementById('postInput');
+            if(!input.value.trim()) return;
 
-</section>
+            await fetch('/api/posts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text: input.value })
+            });
 
-<div class="container">
+            input.value = '';
+            loadFeed();
+        }
 
-<div class="grid">
-
-<div>
-
-<div class="card">
-
-<h2>Talk To The World</h2>
-
-<textarea placeholder="What's on your mind today?"></textarea>
-
-<div class="post-actions">
-
-<button>📷 Upload Photo</button>
-<button>🎥 Upload Video</button>
-<button>Publish</button>
-
-</div>
-
-</div>
-
-<div class="card" style="margin-top:25px;">
-
-<h2>Trending Posts</h2>
-
-<div class="feed-post">
-
-<h4>Luxury Lifestyle</h4>
-
-<p>
-Success isn't just about money.
-It's about freedom, impact and legacy.
-</p>
-
-</div>
-
-<div class="feed-post">
-
-<h4>Business Network</h4>
-
-<p>
-Connect with entrepreneurs and investors around the world.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div>
-
-<div class="card">
-
-<h2>Friends Achievements</h2>
-
-<p>🏆 Michael completed his MBA</p>
-<br>
-<p>🎉 Sarah launched her company</p>
-<br>
-<p>⭐ David reached 10,000 followers</p>
-
-</div>
-
-<div class="card" style="margin-top:25px;">
-
-<h2>Communities</h2>
-
-<div class="community-box">
-
-<h3>Create Community</h3>
-
-<p>
-Gather your friends, family, relatives or business partners
-to discuss important matters privately.
-</p>
-
-<br>
-
-<button>Create Community</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-<p>
-© 2026 Royal — Where Prestige Meets Connection
-</p>
-
-</footer>
-
+        // Initialize connection
+        loadFeed();
+    </script>
 </body>
 </html>
