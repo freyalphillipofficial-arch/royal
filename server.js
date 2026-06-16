@@ -12,8 +12,8 @@ let databasePosts = [
     { text: "Welcome to the grand opening of Royal.", meta: "System • Just Now" }
 ];
 
-// 1. ROUTE FOR YOUR HOME PAGE
-app.get('/', (req, res) => {
+// 1. ROUTE FOR YOUR HOME PAGE (Handles both / and /index.html)
+app.get(['/', '/index.html'], (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
